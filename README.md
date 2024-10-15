@@ -1,29 +1,68 @@
-# file-based-routing
+# **Vue 3 File-Based Routing Example**
 
-This template should help get you started developing with Vue 3 in Vite.
+This project demonstrates how to use file-based routing in Vue 3 with `vite-plugin-pages`. Routes are generated automatically from the structure of the `pages/` directory, simplifying route management.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## **Project Structure**
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```
+src/
+├── App.vue
+├── main.js
+├── router/
+│   └── index.js
+├── pages/
+│   ├── index.vue         // Route: "/"
+│   ├── about.vue         // Route: "/about"
+│   └── users/
+│       ├── index.vue     // Route: "/users"
+│       └── [id].vue      // Route: "/users/:id"
 ```
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
-npm run dev
+## **App.vue Navigation**
+
+```vue
+<script setup></script>
+
+<template>
+  <main>
+    <div class="wrapper">
+      <router-link to="/">Homepage</router-link>
+      <router-link to="/about" class="pl-3">About</router-link>
+      <router-link class="pl-3" to="/users/1">User 1</router-link>
+    </div>
+    <router-view />
+  </main>
+</template>
+
+<style scoped>
+.wrapper {
+  padding: 10px;
+}
+.pl-3 {
+  padding-left: 10px;
+}
+</style>
+
 ```
 
-### Compile and Minify for Production
+---
 
-```sh
-npm run build
-```
+## **How to Run the Project**
+
+1. Install dependencies:  
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:  
+   ```bash
+   npm run dev
+   ```
+
+3. Open the app at `http://localhost:5173/`.
+
+---
