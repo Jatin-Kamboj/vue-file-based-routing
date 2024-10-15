@@ -1,0 +1,25 @@
+{
+  "name": "file-based-routing",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "author": {
+    "email": "er.jatinkamboj96@gmail.com",
+    "name": "Jatin Kamboj",
+    "url": "https://github.com/Jatin-Kamboj"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.12",
+    "vue-router": "^4.0.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "vite": "^5.4.8",
+    "vite-plugin-pages": "^0.32.3"
+  }
+}
